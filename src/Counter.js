@@ -1,4 +1,5 @@
 import React from 'react';
+import LikesComponent from'./LikesComponent.js';
 
 
 /** Starting with a counter, once established create Components folder and seperate subsequent components using ATOMIC principles
@@ -16,17 +17,16 @@ class Counter extends React.Component {
     this.state = {
       count: 0,
       words:["starter"],
-      bits: ["whirly  ","chunks","mojo","plumb"]
-    },
-
-    this.props = {
-       bits: ["whirly  ","chunks","mojo","plumb"];
-  }
+      bits: ["whirly  ","chunks","mojo","plumb"],
+    };
+    console.log ("I'm in super()");
+}
  
  // Render function: always needs return statement and must be contained in a single tag
  // calls onClick action and defines state change
  // note: look up syntax (=>) and Cou
   render() {
+    console.log("cogito ergo sum");
     return (
       <div>
       <button
@@ -38,17 +38,13 @@ class Counter extends React.Component {
         Count: {this.state.count}
       </button>
 
+      <LikesComponent />
+      
       <p>after button inside return</p>
-      <form>
-        <input type = "text" placeholder = "sprinkles" name = "newWord"></input>
-        <input type = "submit" onClick ={()=> {words: {(this.state.words).push(newWord)});
-     }} 
-
-    >
-     add word</input>
-      </form>
-      <h1>Words: {this.state.words}</h1>
+            <h1>Words: {this.state.words}</h1>
       <p>Bits: {this.state.bits}</p>
+
+      <LikesComponent />
 
       </div>
     );
