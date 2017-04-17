@@ -14,15 +14,21 @@ constructor() {
  // calls onClick action and defines state change
  // note: look up syntax (=>) and Count:{}
   render(){
-    if (this.props.name == 'Wolfgang Amadeus Mozart') {
+  	    if (this.props.name == 'Wolfgang Amadeus Mozart') {
       return (
+      	<div>
+      	<h1>{this.props.name}</h1>
       	<h2>Wolfgang in the house</h2>
+      	</div>
       );
     } else {
       return (
+      	<div>
+      	<h1>{this.props.name}</h1>
       	<h2>
-      	  WELCOME "2" MY WEB SITE BABYYY!!!!!
+      	  REAAAAAAAACT.
       	</h2>
+      	</div>
       );
     }
   }

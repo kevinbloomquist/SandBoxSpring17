@@ -19,10 +19,12 @@ class LikesComponent extends React.Component {
 	render() {
 		return (
 			<div>
-				<p>LikesComponent here!</p>
+				<p>LikesComponent here:</p>
 
 				Likes : {this.state.likesCount}
-        <div><button onClick={this.state.onLike}>Like Me</button></div>
+        		<div>
+        		<button onClick={this.state.onLike}>Like Me</button>
+        		</div>
 
 	
 			</div>

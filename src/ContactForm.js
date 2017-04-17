@@ -8,20 +8,20 @@ import React from 'react';
 
 
 this.state = {
-	text:"orig text",
+	input:"orig text",
 	description: "orig descrip"
 };
 
-  this.propTypes ={
-  	name: String,
-  	description: String,
+// Still need to figure out how to run handle text to pass info from text area (below) to state to render
+  handleChange: (e)=> {
+    this.setState({ input: e.target.value });
+  };
 
-    value: React.PropTypes.object.isRequired
-  }
+  handleClick: ()=> {
+    console.log(this.state.input);
+    console.log(e.target.value);
+  };
 
-  handleText: ()=>{
-        		this.setState({text: this.newText.value});
-  }
 
   
 }
@@ -29,17 +29,18 @@ this.state = {
     return (
     <div>
 
-    <p>{this.state.text}</p>
+    <p>{this.state.input}</p>
     <p>{this.state.description}</p>
 
 
         <form className= "ContactForm">
-            <textArea placeholder="description" name = "newText"/>
+            <input type = "text" placeholder="text" onChange = {this.handleChange} />
+
        		<div>
-        	<button type = "submit" 
-        	onClick= {this.handleText}
+        	<button
+        	onClick= {this.handleClick}
         	>
-        	Submit
+        	Change ContactForm - state.input
         	</button>
         	</div>
         </form>

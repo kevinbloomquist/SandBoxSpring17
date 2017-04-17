@@ -20,8 +20,8 @@ class Counter extends React.Component {
 // Makes component stateful by creating state object and defining initial state
     this.state = {
       count: 0,
-      words:["starter"],
-      bits: ["whirly  ","chunks","mojo","plumb"],
+      words:["starter, ", "yankee, ", "item, "],
+      bits: ["whirly  ","chunks ","mojo ","plumb "],
     };
     console.log ("I'm in the constructor()");
 }
@@ -38,8 +38,19 @@ class Counter extends React.Component {
 
       <div>
 
+      <div id= "Hero">
       <Hero />
+      </div>
+
+
+      <div id = "Test">
+      //The test component will toggle what is rendered depending on passed in name try: 'Wolfgang Amadeus Mozart'
       <Test name = "passed down name"/>
+      </div>
+      
+      <div id = "Counter">
+      // Just a simple counter button that displays it's own state and a variation below
+      <div>
       <button
         onClick={() => {
           this.setState({ count: this.state.count + 1 });
@@ -48,14 +59,25 @@ class Counter extends React.Component {
 
         Count: {this.state.count}
       </button>
-
+      </div>
+      </div>
+  
+      <div id = "Likes">
       <LikesComponent />
+      </div>
       
-      <p>after button inside return</p>
-            <h1>Words: {this.state.words}</h1>
-      <p>Bits: {this.state.bits}</p>
 
-    <ContactForm />
+    <div id = "wordsBits">
+     // Using words and bits to learn how to manipulate arrays in state - experiment with passed props after initial success
+      <h1>Words:</h1>
+      <ul>{this.state.words}</ul>
+      <p>Bits: {this.state.bits}</p>
+    </div>
+
+     <div id = "contactForm">
+     // Working to manipulate state from form data
+     <ContactForm />
+     </div>
 
       </div>
     );
