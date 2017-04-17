@@ -2,18 +2,15 @@ console.log('Main.js: Hello World!');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Counter from './Counter';
-// import Test from './Test';
+import Test from './Test';
  
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
     React.createElement(Counter),
     document.getElementById('mount')
   );
+  // ReactDOM.render(
+  //   React.createElement(Test),
+  //   document.getElementById('mount')
+  // );
 });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   ReactDOM.render(
-//     React.createElement(Test),
-//     document.getElementById('mount')
-//   );
-// });
