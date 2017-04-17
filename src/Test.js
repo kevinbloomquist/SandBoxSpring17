@@ -13,12 +13,21 @@ constructor() {
  // Render function: always needs return statement and must be contained in a single tag
  // calls onClick action and defines state change
  // note: look up syntax (=>) and Count:{}
-  render() {
-    return (
-      <h1>Testing passed in props here - {this.props.name}!</h1>
-      
-    );
+  render(){
+    if (this.props.name == 'Wolfgang Amadeus Mozart') {
+      return (
+      	<h2>Wolfgang in the house</h2>
+      );
+    } else {
+      return (
+      	<h2>
+      	  WELCOME "2" MY WEB SITE BABYYY!!!!!
+      	</h2>
+      );
+    }
   }
+
+
 }
 export default Test;
 
