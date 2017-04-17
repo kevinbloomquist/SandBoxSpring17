@@ -9,19 +9,19 @@ import React from 'react';
 
 this.state = {
 	input:"orig text",
-	description: "orig descrip"
-};
+	description: "orig descrip",
+
 
 // Still need to figure out how to run handle text to pass info from text area (below) to state to render
   handleChange: (e)=> {
     this.setState({ input: e.target.value });
-  };
+  },
 
   handleClick: ()=> {
     console.log(this.state.input);
     console.log(e.target.value);
-  };
-
+  }
+}
 
   
 }
@@ -29,20 +29,13 @@ this.state = {
     return (
     <div>
 
-    <p>{this.state.input}</p>
-    <p>{this.state.description}</p>
+    <p>This.state.input: {this.state.input}</p>
+    <p>This.state.descrip: {this.state.description}</p>
 
 
         <form className= "ContactForm">
-            <input type = "text" placeholder="text" onChange = {this.handleChange} />
+            <input type = "text" placeholder="text" onChange = {this.state.handleChange} />
 
-       		<div>
-        	<button
-        	onClick= {this.handleClick}
-        	>
-        	Change ContactForm - state.input
-        	</button>
-        	</div>
         </form>
 
      </div>
